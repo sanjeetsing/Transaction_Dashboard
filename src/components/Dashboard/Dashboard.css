@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Added to stack content vertically */
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px; /* Max width for large screens */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+/* Transaction Dashboard */
+.transaction-dashboard {
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.transaction-dashboard h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-container,
+.filter-container {
+  display: inline-block;
+  margin: 10px;
+}
+
+.search-button,
+.filter-button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover,
+.filter-button:hover {
+  background-color: #fdd835;
+}
+
+/* Centering the Table on the Page */
+.transaction-table-container {
+  display: flex;
+  justify-content: center; /* Center the table */
+  margin-top: 20px;
+  width: 100%;
+}
+
+.transaction-table {
+  width: 100%;
+  max-width: 1000px; /* Limit max table width for readability */
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Standard center alignment for text */
+  padding-left: 25%; /* Apply left padding as per your request */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Table Header */
+.transaction-table th,
+.transaction-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.transaction-table th {
+  background-color: #ffcc80;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.transaction-table td {
+  font-size: 14px;
+  color: #555;
+  background-color: #fafafa;
+}
+
+.transaction-table tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+.transaction-table tr:hover td {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.transaction-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.transaction-table td:first-child {
+  font-weight: bold;
+}
+
+.transaction-table td:nth-child(2),
+.transaction-table td:nth-child(3),
+.transaction-table td:nth-child(4) {
+  text-align: center;
+}
+
+.transaction-table td {
+  padding: 15px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Statistics */
+.statistics {
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.statistics h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.statistics p {
+  background-color: #ffcc80;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Chart */
+.chart-container {
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.chart-container h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .transaction-dashboard,
+  .statistics,
+  .chart-container {
+    padding: 15px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .search-button,
+  .filter-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .statistics p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
